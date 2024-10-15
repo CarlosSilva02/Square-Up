@@ -1,0 +1,49 @@
+body {
+    display: flex;                      /* Use flexbox to center content */
+    flex-direction: column;             /* Stack header and game container vertically */
+    justify-content: center;            /* Center content horizontally */
+    align-items: center;                /* Center content vertically */
+    min-height: 100vh;                  /* Full height of the viewport */
+    margin: 0;                          /* Remove default margin */
+    background:#365563;                /* Background color for the body */
+}
+
+header {
+    width: 100%;                        /* Full width header */
+    padding: 10px;                      /* Add padding for space around text */
+    text-align: center;                 /* Center the header text */
+    background: #365563;          /* Background color of the header */
+    color: white;                       /* Text color */
+    font-size: 24px;                    /* Font size */
+    margin-bottom: 20px;                /* Add margin below header for space */
+}
+
+ canvas{ 
+    width: 900px;                       /* Set the same width as the canvas */
+    height: 700px;                      /* Set the same height as the canvas */ /* Background image for the game area */
+    background: url('game\ background.jpg');
+    background-size: cover;             /* Ensure the image covers the entire game container */
+    background-position: center;        /* Center the background image */
+    background-repeat: no-repeat;       /* Prevent image from repeating */
+    border: 2px solid rgb(255, 255, 255);
+    
+} 
+
+.game-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;             /* Stack the canvas and button vertically */
+    align-items: center;                /* Center content horizontally */
+    justify-content: center;
+}
+
+
+button {
+    color: white;
+    background: none;
+    border: none;
+    margin-top: 4px;                   /* Space between the canvas and button */
+    padding: 10px 20px;                 /* Add padding inside the button */
+    font-size: 16px;                    /* Font size for the button text */
+    cursor: pointer;                    /* Pointer cursor for buttons */
+}
