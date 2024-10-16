@@ -6,7 +6,7 @@ let block = {
     y: 150,
     width: 20,
     height: 20,
-    gravity: 0.05,  // Gravity of the block
+    gravity: 0.5,  // Gravity of the block
     lift: -3.6,     // Lift when the block flaps
     velocity: 0, 
 };
