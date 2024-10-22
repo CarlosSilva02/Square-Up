@@ -6,12 +6,12 @@ let block = {
     y: 150,
     width: 20,
     height: 20,
-    gravity: 0.05,  // Gravity of the block
-    lift: -3.6,     // Lift when the block flaps
+    gravity: .05 ,
+    lift: -2.4,     // Lift when the block flaps
     velocity: 0, 
 };
 
-let pipes = [];
+let pipes = [];  
 let frameCount = 0;
 let gameScore = 0;
 let isGameOver = false; 
@@ -98,7 +98,7 @@ function drawScore() {
 
 // Reset game function 
 function resetGame() {
-    block.y = 150; // Reset bird position
+    block.y = 150; // Reset block position
     block.velocity = 0; // Reset velocity
     pipes = []; // Clear pipes
     frameCount = 0; // Reset frame count
@@ -132,7 +132,11 @@ function gameLoop() {
 
 
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+
+
     block.velocity += block.gravity; // Apply gravity to the block
+
+
     block.y += block.velocity; // Update block position
 
     // stop the blcok from falling off the bottom
@@ -160,10 +164,10 @@ document.addEventListener("keydown", (event) => {
         if (isGameOver) {
             resetGame(); // Reset the game if it's over
         } else {
-            block.velocity += block.lift; // Flap the block if the game is not over
+            block.velocity = block.lift; // Flap the block if the game is not over
         }
     }
-});
+}); 
 
 document.getElementById("restartBtn").addEventListener("click", resetGame); // Keep the button functionality if needed
 
